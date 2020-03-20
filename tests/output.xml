@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200319 22:11:33.368" rpa="false">
+<suite id="s1" name="Login Form" source="C:\qaninja\robot\CursoRobotFrameworkBasico\Jira_Tests\tests\login_form.robot">
+<test id="s1-t1" name="Login Com Sucesso">
+<kw name="Nova Sessão" library="base_jira" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url_jira}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200319 22:11:34.123" level="INFO">Opening browser 'chrome' to base url 'https://jind.magnetimarelli.com/fjira/secure'.</msg>
+<status status="PASS" starttime="20200319 22:11:34.122" endtime="20200319 22:11:55.085"></status>
+</kw>
+<status status="PASS" starttime="20200319 22:11:34.122" endtime="20200319 22:11:55.085"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url_jira}/Dashboard.jspa</arg>
+</arguments>
+<msg timestamp="20200319 22:11:55.090" level="INFO">Opening url 'https://jind.magnetimarelli.com/fjira/secure/Dashboard.jspa'</msg>
+<status status="PASS" starttime="20200319 22:11:55.089" endtime="20200319 22:12:06.105"></status>
+</kw>
+<kw name="Login With">
+<arguments>
+<arg>f67108a</arg>
+<arg>Pretoebranco@27</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:login-form-username</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200319 22:12:06.168" level="INFO">Typing text 'f67108a' into text field 'id:login-form-username'.</msg>
+<status status="PASS" starttime="20200319 22:12:06.166" endtime="20200319 22:12:07.343"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:login-form-password</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20200319 22:12:07.345" level="INFO">Typing text 'Pretoebranco@27' into text field 'id:login-form-password'.</msg>
+<status status="PASS" starttime="20200319 22:12:07.343" endtime="20200319 22:12:09.525"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<msg timestamp="20200319 22:12:09.526" level="INFO">Clicking element 'id:login'.</msg>
+<status status="PASS" starttime="20200319 22:12:09.525" endtime="20200319 22:12:10.654"></status>
+</kw>
+<status status="PASS" starttime="20200319 22:12:06.164" endtime="20200319 22:12:10.655"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20200319 22:12:20.666" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20200319 22:12:10.657" endtime="20200319 22:12:20.666"></status>
+</kw>
+<kw name="Tikets Page">
+<arguments>
+<arg>${searchIssue}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://jind.magnetimarelli.com/fjira/browse/${searchIssue}</arg>
+</arguments>
+<msg timestamp="20200319 22:12:20.691" level="INFO">Opening url 'https://jind.magnetimarelli.com/fjira/browse/CMCA-1735'</msg>
+<status status="PASS" starttime="20200319 22:12:20.690" endtime="20200319 22:13:02.179"></status>
+</kw>
+<status status="PASS" starttime="20200319 22:12:20.684" endtime="20200319 22:13:02.180"></status>
+</kw>
+<kw name="FrontDesk to Analysis">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>id:status-val</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200319 22:13:02.650" level="INFO">${status} = &lt;selenium.webdriver.remote.webelement.WebElement (session="edb94c45c829c5761bc8d72c2219c7a7", element="17f4db05-b67a-402b-af00-dcfc41711748")&gt;</msg>
+<status status="PASS" starttime="20200319 22:13:02.202" endtime="20200319 22:13:02.650"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:action_id_11</arg>
+</arguments>
+<msg timestamp="20200319 22:13:02.651" level="INFO">Clicking element 'id:action_id_11'.</msg>
+<status status="PASS" starttime="20200319 22:13:02.650" endtime="20200319 22:13:04.506"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20200319 22:13:09.510" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200319 22:13:04.507" endtime="20200319 22:13:09.510"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:customfield_11704</arg>
+<arg>f67108a</arg>
+</arguments>
+<msg timestamp="20200319 22:13:09.511" level="INFO">Typing text 'f67108a' into text field 'id:customfield_11704'.</msg>
+<status status="PASS" starttime="20200319 22:13:09.511" endtime="20200319 22:13:11.590"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:issue-workflow-transition-submit</arg>
+</arguments>
+<msg timestamp="20200319 22:13:11.592" level="INFO">Clicking element 'id:issue-workflow-transition-submit'.</msg>
+<status status="PASS" starttime="20200319 22:13:11.591" endtime="20200319 22:13:11.965"></status>
+</kw>
+<status status="PASS" starttime="20200319 22:13:02.201" endtime="20200319 22:13:11.966"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>id:key-val</arg>
+</arguments>
+<assign>
+<var>${issue}</var>
+</assign>
+<msg timestamp="20200319 22:13:12.039" level="INFO">${issue} = &lt;selenium.webdriver.remote.webelement.WebElement (session="edb94c45c829c5761bc8d72c2219c7a7", element="04c5e528-a9f2-4535-9dae-c4fefc5f1428")&gt;</msg>
+<status status="PASS" starttime="20200319 22:13:11.968" endtime="20200319 22:13:12.040"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${issue.text}</arg>
+<arg>${searchIssue}</arg>
+</arguments>
+<status status="PASS" starttime="20200319 22:13:12.046" endtime="20200319 22:13:12.088"></status>
+</kw>
+<tags>
+<tag>login_sucesso</tag>
+</tags>
+<status status="PASS" starttime="20200319 22:11:34.121" endtime="20200319 22:13:12.089" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200319 22:11:33.372" endtime="20200319 22:13:12.101"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">login_sucesso</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Login Form">Login Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
