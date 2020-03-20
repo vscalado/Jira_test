@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    {
+        "type": "robot",
+        "request": "launch",
+        "name": "Robotframework Debugger",
+        "program": "${workspaceFolder}/${relativeFile}",
+        "stopOnEntry": true,
+        "arguments": "",
+        "libraries": [
+            "${workspaceFolder}\\Libraries"
+        ],
+        "variables": [
+            {
+                "Name": "RobotVariable",
+                "Value": "data"
+    
+            }
+        ],
+        "PythonPath": "python"
+    
+    }
+}
