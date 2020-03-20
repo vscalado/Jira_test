@@ -3,9 +3,9 @@ Resource            base_jira.robot
 Library             SeleniumLibrary
 
 Test Setup          Nova Sessão  
-#Test Teardown       Encerra Sessão 
+Test Teardown       Encerra Sessão 
 ***Variables****
-${searchIssue}      CMCA-1735
+${searchIssue}      CMCA-1784
 *** Test Cases *** 
 Login Com Sucesso
     [Tags]          login_sucesso
@@ -13,7 +13,8 @@ Login Com Sucesso
     Login With      f67108a                     Pretoebranco@27
     Sleep           10
     Tikets Page     ${searchIssue}
-    #Initialization to FrontDesk
+    Initialization to FrontDesk
+    Sleep           15
     FrontDesk to Analysis
 
     ${issue}        Get WebElement              id:key-val
@@ -34,16 +35,16 @@ Tikets Page
 Initialization to FrontDesk
     ${status}       Get WebElement                              id:status-val
     Run Keyword If  '${status.text}' == 'INITIALIZATION'        Click Element       id:action_id_481
-    Sleep           5
+    Sleep           10
     Input Text      id:customfield_14500                        jverdugo
     Click Element   id:issue-workflow-transition-submit
 
 FrontDesk to Analysis
     ${status}       Get WebElement                              id:status-val
-    #Run Keyword If  '${status.text}' == 'FRONT DESK'            Click Element       id:assign-to-me
-    #Sleep           5
+    Run Keyword If  '${status.text}' == 'FRONT DESK'            Click Element       id:assign-to-me
+    Sleep            10
     Click Element    id:action_id_11
-    Sleep            5
+    Sleep            10
     Input Text       id:customfield_11704                        f67108a
     Click Element    id:issue-workflow-transition-submit
 

@@ -9,6 +9,6 @@ Nova Sessão
     Open Browser                    ${url_jira}             chrome
 
 
-#Encerra Sessão
-    #Capture Page Screenshot
-    #Close Browser
+Encerra Sessão
+    Capture Page Screenshot
+    Close Browser
